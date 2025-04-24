@@ -1,0 +1,266 @@
+{
+  "format": 1,
+  "restore": {
+    "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\SSTemplateApp\\SSTemplateApp.csproj": {}
+  },
+  "projects": {
+    "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\DataLayer\\DataLayer.csproj": {
+      "restore": {
+        "projectUniqueName": "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\DataLayer\\DataLayer.csproj",
+        "projectName": "DataLayer",
+        "projectPath": "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\DataLayer\\DataLayer.csproj",
+        "UsingMicrosoftNETSdk": false,
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\POCO\\POCO.csproj": {
+                "projectPath": "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\POCO\\POCO.csproj"
+              },
+              "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\Utility\\Utility.csproj": {
+                "projectPath": "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\Utility\\Utility.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\DomainLayer\\DomainLayer.csproj": {
+      "restore": {
+        "projectUniqueName": "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\DomainLayer\\DomainLayer.csproj",
+        "projectName": "DomainLayer",
+        "projectPath": "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\DomainLayer\\DomainLayer.csproj",
+        "UsingMicrosoftNETSdk": false,
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\DataLayer\\DataLayer.csproj": {
+                "projectPath": "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\DataLayer\\DataLayer.csproj"
+              },
+              "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\TransactionLayer\\TransactionLayer.csproj": {
+                "projectPath": "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\TransactionLayer\\TransactionLayer.csproj"
+              },
+              "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\Utility\\Utility.csproj": {
+                "projectPath": "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\Utility\\Utility.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\POCO\\POCO.csproj": {
+      "restore": {
+        "projectUniqueName": "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\POCO\\POCO.csproj",
+        "projectName": "POCO",
+        "projectPath": "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\POCO\\POCO.csproj",
+        "UsingMicrosoftNETSdk": false,
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\SSTemplateApp\\SSTemplateApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\SSTemplateApp\\SSTemplateApp.csproj",
+        "projectName": "SSTemplateApp",
+        "projectPath": "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\SSTemplateApp\\SSTemplateApp.csproj",
+        "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
+        "outputPath": "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\SSTemplateApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "e:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\SSTemplateRESTServiceAPI\\SSTemplateRESTServiceAPI.csproj": {
+                "projectPath": "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\SSTemplateRESTServiceAPI\\SSTemplateRESTServiceAPI.csproj"
+              },
+              "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\Utility\\Utility.csproj": {
+                "projectPath": "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\Utility\\Utility.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "BuildBundlerMinifier": {
+              "target": "Package",
+              "version": "[3.2.449, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.IdentityModel.JsonWebTokens": {
+              "target": "Package",
+              "version": "[8.1.2, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[8.1.2, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[4.8.0, )"
+            },
+            "NETCore.MailKit": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "System.Formats.Asn1": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Crossgen2.win-x64",
+              "version": "[8.0.14, 8.0.14]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\SSTemplateRESTServiceAPI\\SSTemplateRESTServiceAPI.csproj": {
+      "restore": {
+        "projectUniqueName": "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\SSTemplateRESTServiceAPI\\SSTemplateRESTServiceAPI.csproj",
+        "projectName": "SSTemplateRESTServiceAPI",
+        "projectPath": "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\SSTemplateRESTServiceAPI\\SSTemplateRESTServiceAPI.csproj",
+        "UsingMicrosoftNETSdk": false,
+        "frameworks": {
+          "net481": {
+            "projectReferences": {
+              "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\DataLayer\\DataLayer.csproj": {
+                "projectPath": "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\DataLayer\\DataLayer.csproj"
+              },
+              "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\DomainLayer\\DomainLayer.csproj": {
+                "projectPath": "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\DomainLayer\\DomainLayer.csproj"
+              },
+              "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\POCO\\POCO.csproj": {
+                "projectPath": "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\POCO\\POCO.csproj"
+              },
+              "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\Utility\\Utility.csproj": {
+                "projectPath": "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\Utility\\Utility.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net481": {}
+      }
+    },
+    "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\TransactionLayer\\TransactionLayer.csproj": {
+      "restore": {
+        "projectUniqueName": "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\TransactionLayer\\TransactionLayer.csproj",
+        "projectName": "TransactionLayer",
+        "projectPath": "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\TransactionLayer\\TransactionLayer.csproj",
+        "UsingMicrosoftNETSdk": false,
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\DataLayer\\DataLayer.csproj": {
+                "projectPath": "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\DataLayer\\DataLayer.csproj"
+              },
+              "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\Utility\\Utility.csproj": {
+                "projectPath": "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\Utility\\Utility.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\Utility\\Utility.csproj": {
+      "restore": {
+        "projectUniqueName": "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\Utility\\Utility.csproj",
+        "projectName": "Utility",
+        "projectPath": "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\Utility\\Utility.csproj",
+        "UsingMicrosoftNETSdk": false,
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\POCO\\POCO.csproj": {
+                "projectPath": "F:\\HITI\\ProjectTodo\\Sports-AI\\Code\\AISports\\POCO\\POCO.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    }
+  }
+}

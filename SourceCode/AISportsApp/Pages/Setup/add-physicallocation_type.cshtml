@@ -1,0 +1,106 @@
+@page
+@model AISportsApp.Pages.add_physicallocation_typeModel
+@{
+ViewData["Title"] = "physicallocation_type";
+}
+<!-- Content Header (Page header) -->
+<div class="content-header">
+<div class="container-fluid">
+<div class="row mb-2">
+<div class="col-sm-6">
+<h1 class="m-0"> Add 
+Physical Location Type
+</h1>
+</div>
+<div class="col-sm-6">
+<ol class="breadcrumb float-sm-right">
+<li class="breadcrumb-item"><a href="~/Setup/physicallocation_type">Physical Location Type</a></li>
+<li class="breadcrumb-item active"> Add Physical Location Type</li>
+</ol>
+</div>
+</div>
+</div><!-- /.container-fluid -->
+</div><!-- /.content-header -->
+<!-- Main content -->
+<div class="content">
+<div class="container-fluid">
+<div class="row">
+<div class="col-lg-12">
+<div class="card card-primary ">
+<div class="card-header">
+<h5 class="m-0"> Add Physical Location Type</h5>
+</div>
+<form id = "physicallocation_typeForm" name="physicallocation_typeForm" method="post" asp-page-handler="AddPhysicalLocation_Type">
+<div class="card-body">
+<input type="hidden" asp-for="PhysicalLocation_Type_Id"/>
+<div class="row">
+<div class="col-sm-6">
+<div class="form-group">
+<label>Physical Location Type Name</label>
+<input  asp-for="PhysicalLocationTypeName" id="PhysicalLocationTypeName" name="PhysicalLocationTypeName" type = "text" class="form-control" placeholder="Enter PhysicalLocationTypeName...">
+<span asp-validation-for="PhysicalLocationTypeName" class="text-danger"></span>
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<label>Description</label>
+<textarea rows="5" asp-for="Description" id="Description" name="Description" type = "text" class="form-control" placeholder="Enter Description..."></textarea>
+<span asp-validation-for="Description" class="text-danger"></span>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div class="form-group">
+<label> Select Parent Physical Location Type</label>
+<select asp-items="Model.Parent_PhysicalLocation_Type_IDs" asp-for="Parent_PhysicalLocation_Type_ID" id="Parent_PhysicalLocation_Type_ID" name="Parent_PhysicalLocation_Type_ID" class="form-control"></select>
+<span asp-validation-for="Parent_PhysicalLocation_Type_ID" class="text-danger"></span>
+</div>
+</div>
+</div>
+<input type="hidden" asp-for="Is_Active"/>
+<input type="hidden" asp-for="Created_Date"/>
+<input type="hidden" asp-for="Created_By"/>
+<input type="hidden" asp-for="Modified_Date"/>
+<input type="hidden" asp-for="Modified_By"/>
+<input type="hidden" asp-for="Audit_Id"/>
+<input type="hidden" asp-for="User_IP"/>
+<input type="hidden" asp-for="Site_Id"/>
+</div>
+<div class="card-footer">
+<button id = "btnAddPhysicalLocation_Type" type="submit" Class="btn btn-primary">Add</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<!-- /.row -->
+<div class="row">
+<div class="col-12">
+<!-- Display ModelState Errors -->
+@if (!Model.ModelState.IsValid)
+{
+<div class="text-danger">
+<ul>
+@foreach (var error in Model.ModelState.Values.SelectMany(v => v.Errors))
+{
+<li>@error.ErrorMessage</li>
+}
+</ul>
+</div>
+}
+</div>
+</div>
+</div><!-- /.container-fluid -->
+</div>
+  @section Scripts {
+<partial name="_ValidationScriptsPartial" />
+}
+<!-- /.content -->
+<Environment include = "Development" >
+<script src="~/js/customscript/add-physicallocation_type.js" asp-append-version="true"></script>
+</environment>
+<Environment exclude = "Development" >
+<script src="~/js/customscript/add-physicallocation_type.min.js" asp-append-version="true"></script>
+</environment>
+

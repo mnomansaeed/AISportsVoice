@@ -1,0 +1,157 @@
+﻿@page
+@using System.Security.Claims
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0">Touch Navigation</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">Touch Navigation</li>
+                </ol>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+<!-- Main content -->
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card card-primary card-outline">
+                    <div class="card-header">
+                        <h5 class="m-0">Operations</h5>
+                    </div>
+                    <div class="card-body">
+                        <a href="#" class="btn btn-app bg-secondary">
+
+                            <i class="fas fa-barcode"></i> Sorting
+                        </a>
+                        <a href="#" class="btn btn-app bg-success">
+
+                            <i class="fas fa-users"></i> Packing
+                        </a>
+                        <a href="#" class="btn btn-app bg-danger">
+
+                            <i class="fas fa-inbox"></i> Auto Claving
+                        </a>
+                        <a href="#" class="btn btn-app bg-warning">
+
+                            <i class="fas fa-envelope"></i> Dispatching
+                        </a>
+                        <a href="#" class="btn btn-app bg-info">
+
+                            <i class="fas fa-heart"></i> Receiving
+                        </a>
+
+                    </div>
+                </div>
+
+
+                <div class="card card-primary card-outline">
+                    <div class="card-header">
+                        <h5 class="m-0">Setup</h5>
+                    </div>
+                    <div class="card-body">
+                        <button type="button" class="btn btn-block bg-gradient-primary btn-lg" onclick="window.location.href='/AISportsApp/Setup/category'">Asset Type</button>
+                        <button type="button" class="btn btn-block bg-gradient-danger btn-lg" onclick="window.location.href='/AISportsApp/Setup/subcategory'">Sub Asset Type</button>
+                        <button type="button" class="btn btn-block bg-gradient-secondary btn-lg" onclick="window.location.href='/AISportsApp/Setup/physicallocation'">Physical Location</button>
+                        <button type="button" class="btn btn-block bg-gradient-success btn-lg" onclick="window.location.href='/AISportsApp/Setup/condition'">Condition</button>
+                        <button type="button" class="btn btn-block bg-gradient-info btn-lg" onclick="window.location.href='/AISportsApp/Setup/vendor'">Vendor</button>
+                        <button type="button" class="btn btn-block bg-gradient-warning btn-lg" onclick="window.location.href='/AISportsApp/Setup/kittype'">Kit Type</button>
+                        
+
+
+                        <button type="button" class="btn btn-block bg-gradient-primary btn-lg" onclick="window.location.href='/AISportsApp/Setup/sterilizertype'">Sterilizer Type</button>
+                        <button type="button" class="btn btn-block bg-gradient-danger btn-lg" onclick="window.location.href='/AISportsApp/Setup/cycletype'">Cycle Type</button>
+                        <button type="button" class="btn btn-block bg-gradient-info btn-lg" onclick="window.location.href='/AISportsApp/Setup/sterilizer'"> Sterilizer Unit</button>
+
+                    </div>
+                </div>
+                <div class="card card-primary card-outline">
+                    <div class="card-header">
+                        <h5 class="m-0">Logs</h5>
+                    </div>
+                    <div class="card-body">
+                        <button type="button" class="btn btn-block bg-gradient-primary btn-lg">Sorting Logs</button>
+                        <button type="button" class="btn btn-block bg-gradient-secondary btn-lg">Packing Logs</button>
+                        <button type="button" class="btn btn-block bg-gradient-success btn-lg">Dispatching Logs</button>
+                        <button type="button" class="btn btn-block bg-gradient-info btn-lg">Autoclaving Logs</button>
+                        <button type="button" class="btn btn-block bg-gradient-danger btn-lg">Receiving Logs</button>
+
+
+                    </div>
+                </div>
+            </div>
+            <!-- /.col-md-6 -->
+            <div class="col-lg-6">
+                <div class="card card-primary card-outline">
+                    <div class="card-header">
+                        <h5 class="m-0">Inventory</h5>
+                    </div>
+                    <div class="card-body">
+                        <a href="#" class="btn btn-app bg-warning">
+
+                            <i class="fas fa-envelope"></i> New Asset
+                        </a>
+                        <a href="#" class="btn btn-app bg-info">
+
+                            <i class="fas fa-heart"></i> Update Inventory
+                        </a>
+                    </div>
+                </div>
+                <div class="card card-primary card-outline">
+                    <div class="card-header">
+                        <h5 class="m-0">Administration</h5>
+                    </div>
+                    <div class="card-body">
+                        <!-- Check if the user is authenticated -->
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            if (User.FindFirst(ClaimTypes.Role)?.Value == "Super Admin Group")
+                            {
+                                <button type="button" class="btn btn-block bg-gradient-success btn-lg" onclick="window.location.href='/AISportsApp/Setup/subscription'">Subscription</button>
+                                <button type="button" class="btn btn-block bg-gradient-warning btn-lg" onclick="window.location.href='/AISportsApp/Setup/tenant'">Tenant</button>
+                                <button type="button" class="btn btn-block bg-gradient-info btn-lg" onclick="window.location.href='/AISportsApp/Setup/location_type'">Business Entity Type</button>
+                                <button type="button" class="btn btn-block bg-gradient-danger btn-lg" onclick="window.location.href='/AISportsApp/Setup/location'">Business Entity</button>
+                                <button type="button" class="btn btn-block bg-gradient-secondary btn-lg" onclick="window.location.href='/AISportsApp/Setup/physicallocation_type'">Physical Location Type</button>
+                            }
+                        }
+                        <button type="button" class="btn btn-block bg-gradient-primary btn-lg" onclick="window.location.href='/AISportsApp/Setup/group'">User Group</button>
+                        <button type="button" class="btn btn-block bg-gradient-success btn-lg" onclick="window.location.href='/AISportsApp/Setup/user'">User</button>
+                        <button type="button" class="btn btn-block bg-gradient-danger btn-lg" onclick="window.location.href='/AISportsApp/Setup/employee'">Employee</button>
+                    </div>
+                </div>
+                <div class="card card-primary card-outline">
+                    <div class="card-header">
+                        <h5 class="m-0">Reports</h5>
+                    </div>
+                    <div class="card-body">
+                        <button type="button" class="btn btn-block bg-gradient-primary btn-lg">Parent Report</button>
+                        <button type="button" class="btn btn-block bg-gradient-secondary btn-lg">Kitting List</button>
+                        <button type="button" class="btn btn-block bg-gradient-success btn-lg">Dispatching List</button>
+                        <button type="button" class="btn btn-block bg-gradient-info btn-lg">Asset Tracking</button>
+                        <button type="button" class="btn btn-block bg-gradient-danger btn-lg">Receiving List</button>
+                        <button type="button" class="btn btn-block bg-gradient-warning btn-lg">Inventory List</button>
+
+                        <button type="button" class="btn btn-block bg-gradient-primary btn-lg">Item List</button>
+                        <button type="button" class="btn btn-block bg-gradient-secondary btn-lg">Instrument Sorting List</button>
+                        <button type="button" class="btn btn-block bg-gradient-success btn-lg">Independent Sorting List</button>
+
+                    </div>
+                </div>
+            </div>
+            <!-- /.col-md-6 -->
+        </div>
+        <!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+<!-- /.content -->

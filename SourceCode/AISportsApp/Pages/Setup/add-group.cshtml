@@ -1,0 +1,106 @@
+@page
+@model AISportsApp.Pages.add_groupModel
+@{
+ViewData["Title"] = "group";
+}
+<!-- Content Header (Page header) -->
+<div class="content-header">
+<div class="container-fluid">
+<div class="row mb-2">
+<div class="col-sm-6">
+<h1 class="m-0"> Add 
+Group
+</h1>
+</div>
+<div class="col-sm-6">
+<ol class="breadcrumb float-sm-right">
+<li class="breadcrumb-item"><a href="~/Setup/group">Group</a></li>
+<li class="breadcrumb-item active"> Add Group</li>
+</ol>
+</div>
+</div>
+</div><!-- /.container-fluid -->
+</div><!-- /.content-header -->
+<!-- Main content -->
+<div class="content">
+<div class="container-fluid">
+<div class="row">
+<div class="col-lg-12">
+<div class="card card-primary ">
+<div class="card-header">
+<h5 class="m-0"> Add Group</h5>
+</div>
+<form id = "groupForm" name="groupForm" method="post" asp-page-handler="AddGroup">
+<div class="card-body">
+<input type="hidden" asp-for="UserGroupId"/>
+<div class="row">
+<div class="col-sm-12">
+<div class="form-group">
+<label> Select Business Entity</label>
+<select asp-items="Model.Location_IDs" asp-for="Location_ID" id="Location_ID" name="Location_ID" class="form-control"></select>
+<span asp-validation-for="Location_ID" class="text-danger"></span>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-6">
+<div class="form-group">
+<label>Group Name</label>
+<input  asp-for="GroupName" id="GroupName" name="GroupName" type = "text" class="form-control" placeholder="Enter GroupName...">
+<span asp-validation-for="GroupName" class="text-danger"></span>
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<label>Description</label>
+<input  asp-for="Description" id="Description" name="Description" type = "text" class="form-control" placeholder="Enter Description...">
+<span asp-validation-for="Description" class="text-danger"></span>
+</div>
+</div>
+</div>
+<input type="hidden" asp-for="Is_Active"/>
+<input type="hidden" asp-for="Created_Date"/>
+<input type="hidden" asp-for="Created_By"/>
+<input type="hidden" asp-for="Modified_Date"/>
+<input type="hidden" asp-for="Modified_By"/>
+<input type="hidden" asp-for="Audit_Id"/>
+<input type="hidden" asp-for="User_IP"/>
+<input type="hidden" asp-for="Site_Id"/>
+</div>
+<div class="card-footer">
+<button id = "btnAddGroup" type="submit" Class="btn btn-primary">Add</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<!-- /.row -->
+<div class="row">
+<div class="col-12">
+<!-- Display ModelState Errors -->
+@if (!Model.ModelState.IsValid)
+{
+<div class="text-danger">
+<ul>
+@foreach (var error in Model.ModelState.Values.SelectMany(v => v.Errors))
+{
+<li>@error.ErrorMessage</li>
+}
+</ul>
+</div>
+}
+</div>
+</div>
+</div><!-- /.container-fluid -->
+</div>
+  @section Scripts {
+<partial name="_ValidationScriptsPartial" />
+}
+<!-- /.content -->
+<Environment include = "Development" >
+<script src="~/js/customscript/add-group.js" asp-append-version="true"></script>
+</environment>
+<Environment exclude = "Development" >
+<script src="~/js/customscript/add-group.min.js" asp-append-version="true"></script>
+</environment>
+

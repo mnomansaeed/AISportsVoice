@@ -1,0 +1,106 @@
+@page
+@model AISportsApp.Pages.add_location_typeModel
+@{
+ViewData["Title"] = "Business Entity Type";
+}
+<!-- Content Header (Page header) -->
+<div class="content-header">
+<div class="container-fluid">
+<div class="row mb-2">
+<div class="col-sm-6">
+<h1 class="m-0"> Add 
+Business Entity Type
+</h1>
+</div>
+<div class="col-sm-6">
+<ol class="breadcrumb float-sm-right">
+<li class="breadcrumb-item"><a href="~/Setup/location_type">Business Entity Type</a></li>
+<li class="breadcrumb-item active"> Add Business Entity Type</li>
+</ol>
+</div>
+</div>
+</div><!-- /.container-fluid -->
+</div><!-- /.content-header -->
+<!-- Main content -->
+<div class="content">
+<div class="container-fluid">
+<div class="row">
+<div class="col-lg-12">
+<div class="card card-primary ">
+<div class="card-header">
+<h5 class="m-0"> Add Business Entity Type</h5>
+</div>
+<form id = "location_typeForm" name="location_typeForm" method="post" asp-page-handler="AddLocation_Type">
+<div class="card-body">
+<input type="hidden" asp-for="Location_Type_Id"/>
+<div class="row">
+<div class="col-sm-6">
+<div class="form-group">
+<label>Business Entity Type Name</label>
+<input  asp-for="LocationTypeName" id="LocationTypeName" name="LocationTypeName" type = "text" class="form-control" placeholder="Enter LocationTypeName...">
+<span asp-validation-for="LocationTypeName" class="text-danger"></span>
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<label>Description</label>
+<textarea rows="5" asp-for="Description" id="Description" name="Description" type = "text" class="form-control" placeholder="Enter Description..."></textarea>
+<span asp-validation-for="Description" class="text-danger"></span>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div class="form-group">
+<label> Select Parent Business Entity Type</label>
+<select asp-items="Model.Parent_Location_Type_IDs" asp-for="Parent_Location_Type_ID" id="Parent_Location_Type_ID" name="Parent_Location_Type_ID" class="form-control"></select>
+<span asp-validation-for="Parent_Location_Type_ID" class="text-danger"></span>
+</div>
+</div>
+</div>
+<input type="hidden" asp-for="Is_Active"/>
+<input type="hidden" asp-for="Created_Date"/>
+<input type="hidden" asp-for="Created_By"/>
+<input type="hidden" asp-for="Modified_Date"/>
+<input type="hidden" asp-for="Modified_By"/>
+<input type="hidden" asp-for="Audit_Id"/>
+<input type="hidden" asp-for="User_IP"/>
+<input type="hidden" asp-for="Site_Id"/>
+</div>
+<div class="card-footer">
+<button id = "btnAddLocation_Type" type="submit" Class="btn btn-primary">Add</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<!-- /.row -->
+<div class="row">
+<div class="col-12">
+<!-- Display ModelState Errors -->
+@if (!Model.ModelState.IsValid)
+{
+<div class="text-danger">
+<ul>
+@foreach (var error in Model.ModelState.Values.SelectMany(v => v.Errors))
+{
+<li>@error.ErrorMessage</li>
+}
+</ul>
+</div>
+}
+</div>
+</div>
+</div><!-- /.container-fluid -->
+</div>
+  @section Scripts {
+<partial name="_ValidationScriptsPartial" />
+}
+<!-- /.content -->
+<Environment include = "Development" >
+<script src="~/js/customscript/add-location_type.js" asp-append-version="true"></script>
+</environment>
+<Environment exclude = "Development" >
+<script src="~/js/customscript/add-location_type.min.js" asp-append-version="true"></script>
+</environment>
+

@@ -1,0 +1,5 @@
+D:\Projects\MawEdi\MawEdi\MawEdiSolution\POCO\bin\Release\POCO.dll
+D:\Projects\MawEdi\MawEdi\MawEdiSolution\POCO\bin\Release\POCO.pdb
+D:\Projects\MawEdi\MawEdi\MawEdiSolution\POCO\obj\Release\POCO.csproj.CoreCompileInputs.cache
+D:\Projects\MawEdi\MawEdi\MawEdiSolution\POCO\obj\Release\POCO.dll
+D:\Projects\MawEdi\MawEdi\MawEdiSolution\POCO\obj\Release\POCO.pdb

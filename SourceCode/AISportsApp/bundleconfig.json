@@ -1,0 +1,360 @@
+[
+  {
+    "outputFileName": "wwwroot/css/customcss/loading.min.css",
+    "inputFiles": [
+      "wwwroot/css/customcss/loading.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/site.min.css",
+    "inputFiles": [
+      "wwwroot/css/site.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/site.min.js",
+    "inputFiles": [
+      "wwwroot/js/site.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    }
+  },
+  {
+    "outputFileName": "wwwroot/templatecontent/dist/css/adminlte.min.css",
+    "inputFiles": [
+      "wwwroot/templatecontent/dist/css/adminlte.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/recoverpassword.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/recoverpassword.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/forgotpassword.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/forgotpassword.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/signup.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/signup.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/loader.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/loader.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/subscription.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/subscription.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/category.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/category.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/location.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/location.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/physicallocation.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/physicallocation.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/subcategory.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/subcategory.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/tenant.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/tenant.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/add-category.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/add-category.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/add-tenant.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/add-tenant.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/add-subscription.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/add-subscription.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/add-location.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/add-location.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/add-physicallocation.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/add-physicallocation.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/add-subcategory.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/add-subcategory.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/edit-category.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/edit-category.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/edit-tenant.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/edit-tenant.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/edit-subscription.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/edit-subscription.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/edit-location.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/edit-location.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/edit-physicallocation.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/edit-physicallocation.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/edit-subcategory.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/edit-subcategory.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/edit-condition.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/edit-condition.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/add-condition.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/add-condition.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/edit-group.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/edit-group.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/add-group.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/add-group.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/group.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/group.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/edit-employee.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/edit-employee.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/add-employee.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/add-employee.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/employee.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/employee.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/edit-user.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/edit-user.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/add-user.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/add-user.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/user.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/user.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/edit-location_type.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/edit-location_type.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/add-location_type.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/add-location_type.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/location_type.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/location_type.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/edit-vendor.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/edit-vendor.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/add-vendor.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/add-vendor.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/vendor.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/vendor.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/edit-sterilizertype.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/edit-sterilizertype.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/add-sterilizertype.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/add-sterilizertype.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/sterilizertype.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/sterilizertype.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/edit-kittype.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/edit-kittype.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/add-kittype.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/add-kittype.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/kittype.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/kittype.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/edit-cycletype.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/edit-cycletype.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/add-cycletype.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/add-cycletype.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/cycletype.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/cycletype.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/edit-sterilizer.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/edit-sterilizer.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/add-sterilizer.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/add-sterilizer.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/sterilizer.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/sterilizer.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/edit-physicallocation_type.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/edit-physicallocation_type.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/add-physicallocation_type.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/add-physicallocation_type.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/physicallocation_type.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/physicallocation_type.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/customscript/condition.min.js",
+    "inputFiles": [
+      "wwwroot/js/customscript/condition.js"
+    ]
+  }
+]

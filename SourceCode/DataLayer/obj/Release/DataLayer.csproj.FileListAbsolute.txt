@@ -1,0 +1,16 @@
+D:\Projects\MawEdi\MawEdi\MawEdiSolution\DataLayer\bin\Release\DataLayer.dll.config
+D:\Projects\MawEdi\MawEdi\MawEdiSolution\DataLayer\bin\Release\DataLayer.dll
+D:\Projects\MawEdi\MawEdi\MawEdiSolution\DataLayer\bin\Release\DataLayer.pdb
+D:\Projects\MawEdi\MawEdi\MawEdiSolution\DataLayer\bin\Release\EntityFramework.dll
+D:\Projects\MawEdi\MawEdi\MawEdiSolution\DataLayer\bin\Release\EntityFramework.SqlServer.dll
+D:\Projects\MawEdi\MawEdi\MawEdiSolution\DataLayer\bin\Release\POCO.dll
+D:\Projects\MawEdi\MawEdi\MawEdiSolution\DataLayer\bin\Release\Utility.dll
+D:\Projects\MawEdi\MawEdi\MawEdiSolution\DataLayer\bin\Release\POCO.pdb
+D:\Projects\MawEdi\MawEdi\MawEdiSolution\DataLayer\bin\Release\Utility.pdb
+D:\Projects\MawEdi\MawEdi\MawEdiSolution\DataLayer\bin\Release\EntityFramework.xml
+D:\Projects\MawEdi\MawEdi\MawEdiSolution\DataLayer\bin\Release\EntityFramework.SqlServer.xml
+D:\Projects\MawEdi\MawEdi\MawEdiSolution\DataLayer\obj\Release\DataLayer.csproj.AssemblyReference.cache
+D:\Projects\MawEdi\MawEdi\MawEdiSolution\DataLayer\obj\Release\DataLayer.csproj.CoreCompileInputs.cache
+D:\Projects\MawEdi\MawEdi\MawEdiSolution\DataLayer\obj\Release\DataLayer.csproj.CopyComplete
+D:\Projects\MawEdi\MawEdi\MawEdiSolution\DataLayer\obj\Release\DataLayer.dll
+D:\Projects\MawEdi\MawEdi\MawEdiSolution\DataLayer\obj\Release\DataLayer.pdb

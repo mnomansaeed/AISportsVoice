@@ -1,0 +1,128 @@
+@page
+@model AISportsApp.Pages.edit_tenantModel
+@{
+ViewData["Title"] = "tenant";
+}
+<!-- Content Header (Page header) -->
+<div class="content-header">
+<div class="container-fluid">
+<div class="row mb-2">
+<div class="col-sm-6">
+<h1 class="m-0"> Edit 
+Tenant
+</h1>
+</div>
+<div class="col-sm-6">
+<ol class="breadcrumb float-sm-right">
+<li class="breadcrumb-item"><a href="~/Setup/tenant">Tenant</a></li>
+<li class="breadcrumb-item active"> Edit Tenant</li>
+</ol>
+</div>
+</div>
+</div><!-- /.container-fluid -->
+</div><!-- /.content-header -->
+<!-- Main content -->
+<div class="content">
+<div class="container-fluid">
+<div class="row">
+<div class="col-lg-12">
+<div class="card card-primary ">
+<div class="card-header">
+<h5 class="m-0"> Edit Tenant</h5>
+</div>
+<form id = "tenantForm" name="tenantForm" method="post" asp-page-handler="EditTenant">
+<div class="card-body">
+<input type="hidden" asp-for="TenantId"/>
+<div class="row">
+<div class="col-sm-6">
+<div class="form-group">
+<label>Tenant Secret Key</label>
+<input  asp-for="TenantSecret" id="TenantSecret" name="TenantSecret" type = "text" class="form-control" placeholder="Enter TenantSecret...">
+<span asp-validation-for="TenantSecret" class="text-danger"></span>
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<label>Tenant Name</label>
+<input  asp-for="TenantName" id="TenantName" name="TenantName" type = "text" class="form-control" placeholder="Enter TenantName...">
+<span asp-validation-for="TenantName" class="text-danger"></span>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-6">
+<div class="form-group">
+<label>ContactEmail</label>
+<input  asp-for="ContactEmail" id="ContactEmail" name="ContactEmail" type = "text" class="form-control" placeholder="Enter ContactEmail...">
+<span asp-validation-for="ContactEmail" class="text-danger"></span>
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<label>Select SubscriptionId</label>
+<select asp-items="Model.SubscriptionIds" asp-for="SubscriptionId" id="SubscriptionId" name="SubscriptionId" class="form-control"></select>
+<span asp-validation-for="SubscriptionId" class="text-danger"></span>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-6">
+<div class="form-group">
+<label>SubscriptionStartDate</label>
+<input  asp-for="SubscriptionStartDate" id="SubscriptionStartDate" name="SubscriptionStartDate" type = "text" class="form-control" placeholder="MM/dd/yyyy"/>
+<span asp-validation-for="SubscriptionStartDate" class="text-danger"></span>
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<label>SubscriptionEndDate</label>
+<input  asp-for="SubscriptionEndDate" id="SubscriptionEndDate" name="SubscriptionEndDate" type = "text" class="form-control" placeholder="MM/dd/yyyy"/>
+<span asp-validation-for="SubscriptionEndDate" class="text-danger"></span>
+</div>
+</div>
+</div>
+<input type="hidden" asp-for="Is_Active"/>
+<input type="hidden" asp-for="Created_Date"/>
+<input type="hidden" asp-for="Created_By"/>
+<input type="hidden" asp-for="Modified_Date"/>
+<input type="hidden" asp-for="Modified_By"/>
+<input type="hidden" asp-for="Audit_Id"/>
+<input type="hidden" asp-for="User_IP"/>
+</div>
+<div class="card-footer">
+<button id = "btnEditTenant" type="submit" Class="btn btn-primary">Update</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<!-- /.row -->
+<div class="row">
+<div class="col-12">
+<!-- Display ModelState Errors -->
+@if (!Model.ModelState.IsValid)
+{
+<div class="text-danger">
+<ul>
+@foreach (var error in Model.ModelState.Values.SelectMany(v => v.Errors))
+{
+<li>@error.ErrorMessage</li>
+}
+</ul>
+</div>
+}
+</div>
+</div>
+</div><!-- /.container-fluid -->
+</div>
+  @section Scripts {
+<partial name="_ValidationScriptsPartial" />
+}
+<!-- /.content -->
+<Environment include = "Development" >
+<script src="~/js/customscript/edit-tenant.js" asp-append-version="true"></script>
+</environment>
+<Environment exclude = "Development" >
+<script src="~/js/customscript/edit-tenant.min.js" asp-append-version="true"></script>
+</environment>
+

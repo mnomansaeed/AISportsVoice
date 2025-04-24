@@ -1,0 +1,12 @@
+﻿@{
+    string cLayout = "";
+   if (Context.Request.Path.Value.Contains("login") || Context.Request.Path.Value.Contains("Login") || Context.Request.Path.Value.Contains("signup") || Context.Request.Path.Value.Contains("Signup") || Context.Request.Path.Value.Contains("logout1") || Context.Request.Path.Value.Contains("Logout1") || Context.Request.Path.Value.Contains("forgot-password") || Context.Request.Path.Value.Contains("Forgot-Password") || Context.Request.Path.Value.Contains("recover-password") || Context.Request.Path.Value.Contains("Recover-Password") || Context.Request.Path.Value.Contains("packagesignup") || Context.Request.Path.Value.Contains("PackageSignup"))
+    {
+        cLayout = "Shared/_LayoutLogin.cshtml";
+    }
+    else
+    {
+        cLayout = "Shared/_Layout.cshtml";
+    }
+    Layout = cLayout;
+}

@@ -1,0 +1,147 @@
+@page
+@model AISportsApp.Pages.add_physicallocationModel
+@{
+ViewData["Title"] = "physicallocation";
+}
+<!-- Content Header (Page header) -->
+<div class="content-header">
+<div class="container-fluid">
+<div class="row mb-2">
+<div class="col-sm-6">
+<h1 class="m-0"> Add 
+Physical Location
+</h1>
+</div>
+<div class="col-sm-6">
+<ol class="breadcrumb float-sm-right">
+<li class="breadcrumb-item"><a href="~/Setup/physicallocation">Physical Location</a></li>
+<li class="breadcrumb-item active"> Add Physical Location</li>
+</ol>
+</div>
+</div>
+</div><!-- /.container-fluid -->
+</div><!-- /.content-header -->
+<!-- Main content -->
+<div class="content">
+<div class="container-fluid">
+<div class="row">
+<div class="col-lg-12">
+<div class="card card-primary ">
+<div class="card-header">
+<h5 class="m-0"> Add Physical Location</h5>
+</div>
+<form id = "physicallocationForm" name="physicallocationForm" method="post" asp-page-handler="AddPhysicalLocation">
+<div class="card-body">
+<input type="hidden" asp-for="PhysicalLocation_ID"/>
+<div class="row">
+<div class="col-sm-12">
+<div class="form-group">
+<label> Select Business Entity</label>
+<select asp-items="Model.Location_IDs" asp-for="Location_ID" id="Location_ID" name="Location_ID" class="form-control"></select>
+<span asp-validation-for="Location_ID" class="text-danger"></span>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-6">
+<div class="form-group">
+<label>Location Name</label>
+<input  asp-for="PhysicalLocationName" id="PhysicalLocationName" name="PhysicalLocationName" type = "text" class="form-control" placeholder="Enter PhysicalLocationName...">
+<span asp-validation-for="PhysicalLocationName" class="text-danger"></span>
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<label>Short Code</label>
+<input  asp-for="Short_Code" id="Short_Code" name="Short_Code" type = "text" class="form-control" placeholder="Enter Short_Code...">
+<span asp-validation-for="Short_Code" class="text-danger"></span>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-6">
+<div class="form-group">
+<label>Long Code</label>
+<input  asp-for="Long_Code" id="Long_Code" name="Long_Code" type = "text" class="form-control" placeholder="Enter Long_Code...">
+<span asp-validation-for="Long_Code" class="text-danger"></span>
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<label>Short Name</label>
+<input  asp-for="Short_Name" id="Short_Name" name="Short_Name" type = "text" class="form-control" placeholder="Enter Short_Name...">
+<span asp-validation-for="Short_Name" class="text-danger"></span>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-6">
+<div class="form-group">
+<label>Description</label>
+<textarea rows="5" asp-for="Description" id="Description" name="Description" type = "text" class="form-control" placeholder="Enter Description..."></textarea>
+<span asp-validation-for="Description" class="text-danger"></span>
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<label>Select Parent Physical Location</label>
+<select asp-items="Model.Parent_PhysicalLocation_IDs" asp-for="Parent_PhysicalLocation_ID" id="Parent_PhysicalLocation_ID" name="Parent_PhysicalLocation_ID" class="form-control"></select>
+<span asp-validation-for="Parent_PhysicalLocation_ID" class="text-danger"></span>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div class="form-group">
+<label> Select Physical Location Type</label>
+<select asp-items="Model.PhysicalLocation_Type_Ids" asp-for="PhysicalLocation_Type_Id" id="PhysicalLocation_Type_Id" name="PhysicalLocation_Type_Id" class="form-control"></select>
+<span asp-validation-for="PhysicalLocation_Type_Id" class="text-danger"></span>
+</div>
+</div>
+</div>
+<input type="hidden" asp-for="Is_Active"/>
+<input type="hidden" asp-for="Created_Date"/>
+<input type="hidden" asp-for="Created_By"/>
+<input type="hidden" asp-for="Modified_Date"/>
+<input type="hidden" asp-for="Modified_By"/>
+<input type="hidden" asp-for="Audit_Id"/>
+<input type="hidden" asp-for="User_IP"/>
+<input type="hidden" asp-for="Site_Id"/>
+</div>
+<div class="card-footer">
+<button id = "btnAddPhysicalLocation" type="submit" Class="btn btn-primary">Add</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<!-- /.row -->
+<div class="row">
+<div class="col-12">
+<!-- Display ModelState Errors -->
+@if (!Model.ModelState.IsValid)
+{
+<div class="text-danger">
+<ul>
+@foreach (var error in Model.ModelState.Values.SelectMany(v => v.Errors))
+{
+<li>@error.ErrorMessage</li>
+}
+</ul>
+</div>
+}
+</div>
+</div>
+</div><!-- /.container-fluid -->
+</div>
+  @section Scripts {
+<partial name="_ValidationScriptsPartial" />
+}
+<!-- /.content -->
+<Environment include = "Development" >
+<script src="~/js/customscript/add-physicallocation.js" asp-append-version="true"></script>
+</environment>
+<Environment exclude = "Development" >
+<script src="~/js/customscript/add-physicallocation.min.js" asp-append-version="true"></script>
+</environment>
+

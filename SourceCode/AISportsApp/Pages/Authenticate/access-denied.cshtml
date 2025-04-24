@@ -1,0 +1,39 @@
+﻿@page
+@model AISportsApp.Pages.Authenticate.AccessDeniedModel
+@{
+}
+<div class="login-box">
+    <div class="login-logo">
+        <a href="~/index"><b>Access</b>Denied</a>
+    </div>
+    <!-- /.login-logo -->
+    <div class="card">
+        <div class="card-body login-card-body">
+            <p class="login-box-msg">Invalid login credentials, Sign in to start your session again.</p>
+
+           
+               
+                <div class="row">
+                    
+                    <!-- /.col -->
+                    <div class="col-12">
+                    <button id="btnSignin" type="button" class="btn btn-primary btn-block">Sign In</button>
+                    </div>
+                    <!-- /.col -->
+                </div>
+            
+
+    
+
+          
+        </div>
+        <!-- /.login-card-body -->
+    </div>
+</div>
+<!-- /.login-box -->
+
+<script type="text/javascript">
+    document.getElementById("btnSignin").onclick = function () {
+        location.href = "~/index";
+    };
+</script>

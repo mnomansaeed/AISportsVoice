@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B77C019D-92BE-4D3E-956F-66C877FF8015}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataLayer</RootNamespace>
+    <AssemblyName>DataLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataLayerBase\DataBase.cs" />
+    <Compile Include="DataLayerBase\IData.cs" />
+    <Compile Include="DataPartialEntities\AI_Model.cs" />
+    <Compile Include="DataPartialEntities\Category.cs" />
+    <Compile Include="DataPartialEntities\Commentary_Feed.cs" />
+    <Compile Include="DataPartialEntities\Commentary_Log.cs" />
+    <Compile Include="DataPartialEntities\Commentary_Segment.cs" />
+    <Compile Include="DataPartialEntities\Customer.cs" />
+    <Compile Include="DataPartialEntities\Custom_Audience_Segment.cs" />
+    <Compile Include="DataPartialEntities\Data_Retention_Policy.cs" />
+    <Compile Include="DataPartialEntities\Department.cs" />
+    <Compile Include="DataPartialEntities\Dynamic_Pricing_History.cs" />
+    <Compile Include="DataPartialEntities\Employee.cs" />
+    <Compile Include="DataPartialEntities\Feedback.cs" />
+    <Compile Include="DataPartialEntities\Group.cs" />
+    <Compile Include="DataPartialEntities\Incident_Log.cs" />
+    <Compile Include="DataPartialEntities\Language.cs" />
+    <Compile Include="DataPartialEntities\Live_Match.cs" />
+    <Compile Include="DataPartialEntities\Localization_Token.cs" />
+    <Compile Include="DataPartialEntities\Location.cs" />
+    <Compile Include="DataPartialEntities\Location_Detail.cs" />
+    <Compile Include="DataPartialEntities\Location_Type.cs" />
+    <Compile Include="DataPartialEntities\Manufacturer.cs" />
+    <Compile Include="DataPartialEntities\Match_Stat.cs" />
+    <Compile Include="DataPartialEntities\Model_Training_Job.cs" />
+    <Compile Include="DataPartialEntities\PhysicalLocation.cs" />
+    <Compile Include="DataPartialEntities\PhysicalLocation_Detail.cs" />
+    <Compile Include="DataPartialEntities\PhysicalLocation_Type.cs" />
+    <Compile Include="DataPartialEntities\RealTime_Event_Queue.cs" />
+    <Compile Include="DataPartialEntities\Region_Compliance.cs" />
+    <Compile Include="DataPartialEntities\Retraining_Feedback.cs" />
+    <Compile Include="DataPartialEntities\Screen.cs" />
+    <Compile Include="DataPartialEntities\Settings.cs" />
+    <Compile Include="DataPartialEntities\Sponsor_Message.cs" />
+    <Compile Include="DataPartialEntities\SubCategory.cs" />
+    <Compile Include="DataPartialEntities\Subscription.cs" />
+    <Compile Include="DataPartialEntities\Supplier.cs" />
+    <Compile Include="DataPartialEntities\System_Health_Log.cs" />
+    <Compile Include="DataPartialEntities\Tenant.cs" />
+    <Compile Include="DataPartialEntities\User.cs" />
+    <Compile Include="DataPartialEntities\User_Activity_Log.cs" />
+    <Compile Include="DataPartialEntities\User_Group.cs" />
+    <Compile Include="DataPartialEntities\User_Screen_Right.cs" />
+    <Compile Include="DataPartialEntities\User_Session_Tracking.cs" />
+    <Compile Include="DataPartialEntities\Vendor.cs" />
+    <Compile Include="DataPartialEntities\Voice.cs" />
+    <Compile Include="DataPartialEntities\Voice_Preference.cs" />
+    <Compile Include="EF\AI_Model.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Category.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Commentary_Feed.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Commentary_Log.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Commentary_Segment.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Customer.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Custom_Audience_Segment.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Data_Retention_Policy.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Department.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Dynamic_Pricing_History.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\EGTAssetModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EGTAssetModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\EGTAssetModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\EGTAssetModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EGTAssetModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Employee.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Feedback.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Group.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Incident_Log.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Language.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Live_Match.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Localization_Token.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Location.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Location_Detail.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Location_Type.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Manufacturer.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Match_Stat.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Model_Training_Job.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\PhysicalLocation.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\PhysicalLocation_Detail.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\PhysicalLocation_Type.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\RealTime_Event_Queue.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Region_Compliance.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Retraining_Feedback.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Screen.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Settings.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Sponsor_Message.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\SubCategory.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Subscription.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Supplier.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\System_Health_Log.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Tenant.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\User.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\User_Activity_Log.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\User_Group.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\User_Screen_Right.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\User_Session_Tracking.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Vendor.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Voice.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Voice_Preference.cs">
+      <DependentUpon>EGTAssetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Extension\DataExtension.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="EF\EGTAssetModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EGTAssetModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="EF\EGTAssetModel.edmx.diagram">
+      <DependentUpon>EGTAssetModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\POCO\POCO.csproj">
+      <Project>{24174f81-ef28-422f-b864-59f320b361cc}</Project>
+      <Name>POCO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{848c0ea7-4f4d-4109-a6d7-c771c2175c20}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EF\EGTAssetModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EGTAssetModel.edmx</DependentUpon>
+      <LastGenOutput>EGTAssetModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="EF\EGTAssetModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EGTAssetModel.edmx</DependentUpon>
+      <LastGenOutput>EGTAssetModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
+</Project>
